@@ -18,7 +18,7 @@ def main() -> None:
     # Provide the starting directory
     # starting_directory = "H:\\Meu Drive\\02 - MATERIAIS\\068_NOVA_SECOM_BALANÇO\\secom_balanco_linha_4"
     starting_directory = Path(
-        "I:\\Meu Drive\\02 - MATERIAIS\\022_NOVA_SECOM_LUZ_DO_POVO\\luz_do_povo_banner_3_v4"
+        "I:\\Meu Drive\\02 - MATERIAIS\\034_APEX_BONIFICADO\\nova_apex_web_summit_lisboa"
     )
 
     # Running the tinify function

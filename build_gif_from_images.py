@@ -5,8 +5,8 @@ from pathlib import Path
 
 
 project_path = Path(__file__).parent.resolve()
-source_path = "I:\\Meu Drive\\02 - MATERIAIS\\034_APEX_BONIFICADO\\nova_apex_web_summit_lisboa"
-destination_path = "I:\\Meu Drive\\02 - MATERIAIS\\034_APEX_BONIFICADO\\nova_apex_web_summit_lisboa"
+source_path = "I:\\Meu Drive\\02 - MATERIAIS\\037_NOVA_APEX_ACREDITA EXPORTAÇÃO\\nova_apex_acredita_exportacao"
+destination_path = "I:\\Meu Drive\\02 - MATERIAIS\\037_NOVA_APEX_ACREDITA EXPORTAÇÃO\\nova_apex_acredita_exportacao"
 gifsicle_path = os.path.join(project_path, "gifsicle", "gifsicle.exe")
 
 os.makedirs(destination_path, exist_ok=True)
@@ -19,10 +19,10 @@ for subfolder in subfolders:
     output_path = os.path.join(destination_path, f"{subfolder}.gif")
 
     # Config
-    image_files = [os.path.join(subfolder_path, f"{i:03}.png") for i in range(1, 16)]
-    timestamps = [0, 0.2, 0.4, 0.6, 4, 4.2, 4.4, 4.6, 4.8, 5, 12,
-                  12.2, 12.4, 12.6, 12.8]  # when each image appears (in seconds)
-    duration = 16
+    image_files = [os.path.join(subfolder_path, f"{i:03}.png") for i in range(1, 15)]
+    # when each image appears (in seconds)
+    timestamps = [0, 0.4, 0.8, 1.2, 5, 5.4, 5.8, 6.2, 10, 10.4, 10.8, 11.2, 15, 15.4]
+    duration = 20
 
     # Create base empty clip
     clips = []
