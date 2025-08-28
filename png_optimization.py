@@ -16,12 +16,12 @@ def main() -> None:
     tinify.key = os.getenv("TINIFY_KEY")
 
     # Provide the starting directory
-    # starting_directory = "H:\\Meu Drive\\02 - MATERIAIS\\068_NOVA_SECOM_BALANÇO\\secom_balanco_linha_4"
     starting_directory = Path(
-        "I:\\Meu Drive\\02 - MATERIAIS\\034_APEX_BONIFICADO\\nova_apex_web_summit_lisboa"
+        "I:\\Meu Drive\\02 - MATERIAIS\\036_PROPEG_CAIXA_LOTOFACIL\\propeg_caixa_lotofacil_v8"
     )
 
     # Running the tinify function
+    # optimize_pngs_in_directory(starting_directory, size_threshold_kb=50)
     tinify_pngs_in_directory(starting_directory, size_threshold_kb=50)
 
 
@@ -30,7 +30,9 @@ def optimize_png(image_path):
     with Image.open(image_path) as img:
         # Convert image to 'RGBA' (if it isn't already) and optimize
         img = img.convert("RGBA")
-        img.save(image_path, format="PNG", optimize=True, quality=85)
+        # Use FASTOCTREE method for RGBA images
+        # img = img.quantize(colors=256, method=Image.Quantize.FASTOCTREE)
+        img.save(image_path, format="PNG", optimize=True, compress_level=3)
 
 
 def optimize_pngs_in_directory(directory, size_threshold_kb=50):

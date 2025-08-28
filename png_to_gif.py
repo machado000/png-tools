@@ -5,8 +5,8 @@ from pathlib import Path
 
 
 project_path = Path(__file__).parent.resolve()
-source_path = "I:\\Meu Drive\\02 - MATERIAIS\\037_NOVA_APEX_ACREDITA EXPORTAÇÃO\\nova_apex_acredita_exportacao"
-destination_path = "I:\\Meu Drive\\02 - MATERIAIS\\037_NOVA_APEX_ACREDITA EXPORTAÇÃO\\nova_apex_acredita_exportacao"
+source_path = "I:\\Meu Drive\\02 - MATERIAIS\\037_NOVA_APEX_ACREDITA EXPORTAÇÃO\\nova_apex_acredita_exportacao_v2"
+destination_path = "I:\\Meu Drive\\02 - MATERIAIS\\037_NOVA_APEX_ACREDITA EXPORTAÇÃO\\nova_apex_acredita_exportacao_v2"
 gifsicle_path = os.path.join(project_path, "gifsicle", "gifsicle.exe")
 
 os.makedirs(destination_path, exist_ok=True)
